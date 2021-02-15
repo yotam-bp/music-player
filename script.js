@@ -1,6 +1,7 @@
 const image = document.querySelector('img');
 const title = document.getElementById('title');
 const artist = document.getElementById('artist');
+const album = document.getElementById('album');
 const music = document.querySelector('audio');
 const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
@@ -13,24 +14,40 @@ const nextBtn = document.getElementById('next');
 // Music
 const songs = [
   {
-    name: 'jacinto-1',
-    displayName: 'Electric Chill Machine',
-    artist: 'Jacinto Design',
+    name: 'The Internet - Come Over',
+    displayName: 'Come Over',
+    artist: 'The Internet - Hive Mind',
+    album: 'Hive Mind',
   },
   {
-    name: 'jacinto-2',
-    displayName: 'Seven Nation Army (Remix)',
-    artist: 'Jacinto Design',
+    name: 'The Internet - Come Together',
+    displayName: 'Come Together',
+    artist: 'The Internet - Hive Mind',
+    album: 'Hive Mind',
   },
   {
-    name: 'jacinto-3',
-    displayName: 'Goodnight, Disco Queen',
-    artist: 'Jacinto Design',
+    name: 'The Internet - Hold On',
+    displayName: 'Hold On',
+    artist: 'The Internet - Hive Mind',
+    album: 'Hive Mind',
   },
   {
-    name: 'metric-1',
-    displayName: 'Front Row (Remix)',
-    artist: 'Metric/Jacinto Design',
+    name: 'The Internet - Get Away',
+    displayName: 'Get Away',
+    artist: 'The Internet - Ego Death',
+    album: 'Ego Death',
+  },
+  {
+    name: 'The Internet - Girl',
+    displayName: 'Girl',
+    artist: 'The Internet - Ego Death',
+    album: 'Ego Death',
+  },
+  {
+    name: 'The Internet - Special Affair',
+    displayName: 'Special Affair',
+    artist: 'The Internet - Ego Death',
+    album: 'Ego Death',
   },
 ];
 
@@ -61,7 +78,7 @@ function loadSong(song) {
   title.textContent = song.displayName;
   artist.textContent = song.artist;
   music.src = `music/${song.name}.mp3`;
-  image.src = `img/${song.name}.jpg`;
+  image.src = `img/${song.album}.jpg`;
 }
 
 // Current Song
@@ -117,12 +134,28 @@ function updateProgressBar(e) {
   }
 }
 
+
+
 // Set Progress Bar
 function setProgressBar(e) {
   const width = this.clientWidth;
   const clickX = e.offsetX;
   const { duration } = music;
   music.currentTime = (clickX / width) * duration;
+}
+
+let dropdown = document.getElementsByClassName("dropdown-btn");
+
+for (let i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
 }
 
 // Event Listeners

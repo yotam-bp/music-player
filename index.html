@@ -9,20 +9,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <div class="sidenav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+        <button class="dropdown-btn">Hive Mind
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a onclick="loadSong(songs[0]),playSong()">Come Over</a>
+          <a onclick="loadSong(songs[1]),playSong()">Come Together</a>
+          <a onclick="loadSong(songs[2]),playSong()">Hold On</a>
+        </div>
+        <button class="dropdown-btn">Ego Death
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+          <a onclick="loadSong(songs[3]),playSong()">Get Away</a>
+          <a onclick="loadSong(songs[4]),playSong()">Girl</a>
+          <a onclick="loadSong(songs[5]),playSong()">Special Affair</a>     
+        </div>
+        <a href="#contact">Search</a>
+      </div>
     <div class="player-container">
         <!-- Song -->
         <div class="img-container">
-            <img src="img/jacinto-1.jpg" alt="Album Art">
+            <img src="The Internet - Hive Mind Album" alt="Album Art">
         </div>
-        <h2 id="title">Electric Chill Machine</h2>
-        <h3 id="artist">Jacinto</h3>
-        <audio src="music/jacinto-1.mp3"></audio>
+        <h2 id="title"></h2>
+        <h3 id="artist"></h3>
+        <h4 id="album"></h4>
+        <audio src="The Internet - Come Over.mp3"></audio>
         <!-- Progress -->
         <div class="progress-container" id="progress-container">
             <div class="progress" id="progress"></div>
             <div class="duration-wrapper">
-                <span id="current-time">0:00</span>
-                <span id="duration">2:06</span>
+                <span id="current-time"></span>
+                <span id="duration"></span>
             </div>
         </div>
         <!-- Controls -->
