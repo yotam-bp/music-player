@@ -1,4 +1,4 @@
-/* Images created by: https://unsplash.com/@pawel_czerwinski */
+
 
 @import url("https://fonts.googleapis.com/css?family=Spartan:400,700&display=swap");
 
@@ -24,7 +24,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.774);
+  background-color: rgba(0, 0, 0, 0.602);
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -42,6 +42,10 @@ body {
   text-align: left;
   cursor: pointer;
   outline: none;
+}
+
+h1{
+  font-size: 30px;
 }
 
 
@@ -68,7 +72,6 @@ body {
   display: none;
   background-color: rgba(172, 171, 170, 0.404);
   padding-left: 8px;
-  font-size: 10px;
   color: rgb(255, 255, 255);
 }
 
@@ -182,31 +185,31 @@ footer > a {
 
 
 /* Media Query: iPhone (Vertical) */
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 400px) {
 
   .sidenav {
-     height:50%;
      width: 100%;
-     font-size: 15px;
-
+     height: 44%;
+  }
+  .sidenav a, .dropdown-btn {
+    font-size: 12px;
   }
 
   .player-container {
    height: 40%;
    width: 300px;
    position: fixed;
-   z-index: -1;
    top: 55%;
-   left: 10%;
+   left: 13%;
    
   }
 
   .img-container {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     position: relative;
-    top: -20px;
-    left: 72px;
+    top: -40px;
+    left: 52px;
   }
 
   h2 {
@@ -223,14 +226,19 @@ footer > a {
   }
 
   .player-controls {
-    top: -10px;
-    left: 80px;
+    top: -18px;
+    left: 90px;
   }
 
   .fas {
-    font-size: 25px;
+    font-size: 20px;
     margin-right: 30px;
   }
+  .progress-container {
+    margin: 35px 20px;
+    width: 85%;   
+  }
+  
   
   footer ,a{
     font-size: 8px;
